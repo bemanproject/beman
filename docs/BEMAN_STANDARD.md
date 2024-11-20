@@ -81,15 +81,15 @@ following requirements:
 
 ## General
 
-**[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
+**[LIBRARY.NAME]** RECOMMENDATION: Beman library name begin with `beman_`
 followed by an `snake_case` short name.
 
-Examples: `beman.smart_pointer` and `beman.sender_receiver`.
+Examples: `beman_smart_pointer` and `beman_sender_receiver`.
 
 **[REPOSITORY.NAME]** RECOMMENDATION: The repository should be named after the
-library name excluding the `beman.` prefix.
+library name excluding the `beman_` prefix.
 
-Examples: A `beman.smart_pointer` library's repository should be named `smart_pointer`.
+Examples: A `beman_smart_pointer` library's repository should be named `smart_pointer`.
 
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
@@ -119,7 +119,7 @@ description.
 Examples:
 
 ```markdown
-# beman.sender_receiver: Scalable Asychronous Program Building Blocks
+# beman_sender_receiver: Scalable Asychronous Program Building Blocks
 ```
 
 **[README.PURPOSE]** RECOMMENDATION: Following the title, the `README.md` should
@@ -146,7 +146,7 @@ be identical to the library name.
 Examples:
 
 ```CMake
-add_library(beman.smart_pointer STATIC)
+add_library(beman_smart_pointer STATIC)
 #...
 ```
 
@@ -157,7 +157,7 @@ external use.
 Examples:
 
 ```CMake
-add_library(beman::smart_pointer ALIAS beman.smart_pointer)
+add_library(beman::smart_pointer ALIAS beman_smart_pointer)
 #...
 ```
 
@@ -165,9 +165,9 @@ add_library(beman::smart_pointer ALIAS beman.smart_pointer)
 target, should begin with a `<library_name>.` prefix
 
 ```CMake
-add_executable(beman.smart_pointer.examples.basic)
+add_executable(beman_smart_pointer.examples.basic)
 #...
-add_executable(beman.smart_pointer.tests.roundtrip)
+add_executable(beman_smart_pointer.tests.roundtrip)
 #...
 ```
 
