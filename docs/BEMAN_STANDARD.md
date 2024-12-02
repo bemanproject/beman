@@ -133,6 +133,17 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
+```suggestion
+**[README.LIBRARY_STATUS]**  RECOMMENDATION: Following the implements section and a newline, the `README.md` should state the library status (missing section implies development status). Beman libraries possible status: 
+    * `BEMAN DEVELOPMENT`: The target paper(s) may change within the ISO standardization stages, thus also the implementation. Testing may be incomplete in this stage.
+    * `BEMAN UNSTABLE`: The paper(s) may be still pending for final ISO C++ Standardization review. The library implementation matches the paper(s), but needs more testing and possible more updates to be Beman Standard conformant.
+    * `BEMAN STABLE`: All target papers were accepted into the ISO C++ Working Draft and all of them were implemented in the current Beman library. The testing is completed. The code is production ready. Only bugfixes expected in this stage. Any other addition to the same utility (e.g., adding another C++29 std::optional extension on top of C++26 std::optional) would be done into a new Beman library / repo.
+
+
+```markdown
+**Library status:** `beman.optional26` is `BEMAN STABLE` (since (#abcdef)[https://github.com/bemanproject/optional26/commit/#abcef] - 20.11.2024).
+```
+
 ## CMake
 
 **[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
