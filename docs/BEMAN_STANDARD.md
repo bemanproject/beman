@@ -461,3 +461,21 @@ copyright notice following the SPDX license identifier.
 
 **[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/` should export
 entities in the `beman::<short_name>` namespace.
+
+## Continous Integration
+
+**[CI.PLATFORM]** REQUIREMENT: All CI should be implemented using GitHub Actions or an CI platform that appripriatly interacts with the code control system.
+
+**[CI.TEST]** REQUIREMENT: CI must execute appropriate testing of reasonable scope tagged with each commit, and must fail with test cases.
+
+**[CI.TEST.CROSS_PLATFORM]** REQUIREMENT: CI enabled tests must be executed across major platforms if appripriate.
+
+**[CI.TEST.CROSS_COMPILER_FAMILIES]** REQUIREMENT: CI enabled tests must be executed across major compiler families if appripriate.
+
+**[CI.TEST.CROSS_COMPILER_VERSIONS]** RECOMMENDATION: CI enabled tests should be executed across support major versions of appripriate compiler families.
+
+**[CI.DURATION_PER_COMMIT]** RECOMMENDATION: CI pipeline associated with commits should finish in a reasonable amount of time.
+
+**[CI.SCHEDULED_TEST]** RECOMMENDATION: CI enabled checks should run periodically across the entire repository.
+
+**[CI.SCEDULED_TEST_NOTIFY_FAILURE]** REQUIREMENT: There must be a established protocol to report CI failure (e.g. opening a GitHub issue) when scheduled CI fails.
