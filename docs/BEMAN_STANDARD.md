@@ -108,7 +108,8 @@ The top-level of a Beman library repository must consist of `CHANGELOG.md`, `CMa
 `LICENSE`, and `README.md` files.
 
 **[TOPLEVEL.CHANGELOG]** REQUIREMENT: There must be a `CHANGELOG.md` file at the repository's root
-that describes the changes in each version of the library.
+that describes the high level changes in each version of the library (e.g., library status change,
+new paper implementation addition, paper implementation removal etc). 
 
 **[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
 that builds and tests (via. CTest) the library.
@@ -137,10 +138,10 @@ Use the following style:
 - [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) as it is production ready and the API was adopted into the C++ 26 standard.
 
 ### Removed
-- Deprecate `optional::value_or` and `optional::value_or_eval` ...
+- Removed optional range support as Pxyz was reject.
 
 ### Changed
-- `optional::value_or` was replaced with `optional::value_or_eval` ...
+- Added optional ref support, as Pabc was proposed for standardization.
 ```
 
 **[CHANGELOG.LIBRARY_STATUS]** REQUIREMENT: The `CHANGELOG.md` must contain a line for each previous library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md).
