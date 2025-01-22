@@ -147,6 +147,7 @@ Use the following style:
 ### Changed
 - Added optional ref support, as Pabc was proposed for standardization.
 - Added optional ref support as proposed in P1234R0.
+```
 
 **[CHANGELOG.LIBRARY_STATUS]** REQUIREMENT: The `CHANGELOG.md` must contain a line for each previous library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md).
 
