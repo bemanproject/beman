@@ -137,6 +137,12 @@ header with the name "Changelog".
 Use the following style:
 
 ```markdown
+# Changelog
+
+<!--
+SPDX-License-Identifier: 2.0 license with LLVM exceptions
+-->
+
 ## [Unreleased]
 ### Added
 - [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) as it is production ready and the API was adopted into the C++ 26 standard.
