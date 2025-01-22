@@ -138,7 +138,7 @@ Use the following style:
 - [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) as it is production ready and the API was adopted into the C++ 26 standard.
 
 ### Removed
-- Removed optional range support as Pxyz was reject.
+- Removed optional range support as P3456R3 was rejected.
 
 ### Changed
 - Added optional ref support, as Pabc was proposed for standardization.
