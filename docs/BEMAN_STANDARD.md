@@ -145,7 +145,6 @@ Use the following style:
 - Removed optional range support as P3456R3 was rejected.
 
 ### Changed
-- Added optional ref support, as Pabc was proposed for standardization.
 - Added optional ref support as proposed in P1234R0.
 ```
 
