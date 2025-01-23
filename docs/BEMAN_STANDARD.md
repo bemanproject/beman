@@ -601,3 +601,5 @@ code generation:
 See
 [beman.iterator_interface](https://github.com/bemanproject/iterator_interface/blob/5e6714e10faa1799723669e04abec6e75adbdb89/CMakeLists.txt#L44)
 for an example.
+
+**[CPP.EXTENSION_IDENTIFIERS]** RECOMMENDATION: For functionality that is not being recommended for standardization, but is an extension provided by the library, its identifiers should be prefixed with `ext_`.
