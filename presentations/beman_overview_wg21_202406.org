@@ -105,12 +105,12 @@ $ ctest --test-dir build
 - or, just one repo (all libs standalone!)
 ** What we want II
 #+BEGIN_SRC c++
-#include <beman/optional26/optional.hpp>
+#include <beman/optional/optional.hpp>
 #include <iostream>
 int main() {
     // Example from P3168R1: basic range loop over C++26 optional.
 
-    beman::optional26::optional<int> opt{26};
+    beman::optional::optional<int> opt{26};
     for (const auto& i : opt) {
         std::cout << "\"for each loop\" over C++26 optional: opt = " << i << "\n";
     }
@@ -173,7 +173,7 @@ int main() {
 ** Some Initial libraries
 - [[https://github.com/eliaskosunen/scnlib][scnlib]] - proposed for c++26
   - Elias Kosunen allowed us to use as first example
-- [[https://github.com/bemanproject/optional26][beman.optional26]]
+- [[https://github.com/bemanproject/optional][beman.optional]]
   - Darius Neatu and Steve Downey
 - [[https://github.com/dietmarkuehl/beman-execution][beman.execution]] (P2300)
   - Dietmar Kuhl
