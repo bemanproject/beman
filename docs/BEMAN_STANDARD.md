@@ -84,7 +84,7 @@ following requirements:
 ## General
 
 **[LIBRARY.NAMES]** RECOMMENDATION: Beman libraries names begin with `beman.`
-followed by an `snake_case` short name. It should not contain a target C++ version.
+followed by a `snake_case` short name. It should not contain a target C++ version.
 
 Examples: `beman.smart_pointer` and `beman.sender_receiver`.
 
