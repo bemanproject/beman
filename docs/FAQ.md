@@ -31,6 +31,6 @@ Yes! In our effort to create the highest-quality C++ libraries, we've establishe
 
 No! The current concept is that libraries will be gradually deprecated as official standard library implementations roll out. We expect this to correspond to two standards cycles. So a library accepted into C++26 would be removed by C++32. Users can, of course, still depend on the original repo for the implementation if they don't want to change to ~std::~ for some reason.
 
-## Is there are review process like Boost?
+## Is there a review process like Boost?
 
 No. Inclusion in Beman doesn't depend on passing a formal review. That said, authors can ask the community for reviews at any time! Also, we expect libraries to evolve and using the code review facilities allows authors to get other eyes on updates as proposals evolve.
