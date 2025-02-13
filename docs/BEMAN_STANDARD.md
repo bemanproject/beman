@@ -156,22 +156,28 @@ SPDX-License-Identifier: 2.0 license with LLVM exceptions
 
 **[CHANGELOG.LIBRARY_STATUS]** REQUIREMENT: The `CHANGELOG.md` must contain a line for each previous library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md).
 
-Use the following style:
+Use one of the following styles:
 
 ```markdown
-- [LIBRARY_STATUS]: Library status updated to [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use) as it is not yet ready for production use.
+- [LIBRARY_STATUS]: Library status updated to [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use): It is not ready yet for production use.
 ```
 
 or
 
 ```markdown
-- [LIBRARY_STATUS]: Library status updated to [Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes) as it is production ready but the API may undergo changes.
+- [LIBRARY_STATUS]: Library status updated to [Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes): It is production ready but the API may undergo changes.
 ```
 
 or
 
 ```markdown
-- [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) as it is production ready and the API was adopted into the C++ 26 standard.
+- [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api): It is production ready and the API was adopted into the C++ 26 standard.
+```
+
+or 
+
+```markdown
+- [LIBRARY_STATUS]: Library status updated to [Retired. No longer maintained or actively developed.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#retired-no-longer-maintained-or-actively-developed): It was rejected from ISO standardization.
 ```
 
 ## `README.md`
@@ -186,8 +192,40 @@ Examples:
 # beman.sender_receiver: Scalable Asychronous Program Building Blocks
 ```
 
-**[README.PURPOSE]** RECOMMENDATION: Following the title, the `README.md` should
-contain a one- or two-paragraph summary describing the library's purpose.
+**[README.BADGES]** REQUIREMENT: Following the title, the `README.md` must have a one-line badge list. Examples: library status (`[README.LIBRARY_STATUS]`), CI status, code coverage.
+
+Example:
+```markdown
+![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg) ![Continuous Integration Tests](https://github.com/bemanproject/exemplar/actions/workflows/ci_tests.yml/badge.svg) ![Lint Check (pre-commit)](https://github.com/bemanproject/exemplar/actions/workflows/pre-commit.yml/badge.svg)
+```
+
+Use exactly one of the following entries for the library status badge:
+
+```markdown
+![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)
+```
+
+or
+
+```markdown
+![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_api_may_undergo_changes.svg)
+```
+
+or 
+
+```markdown
+![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_stable_api.svg)
+```
+
+or
+
+```markdown
+![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_retired.svg)
+```
+
+
+**[README.PURPOSE]** RECOMMENDATION: Following the badges list and a newline, the `README.md` should
+contain a one line summary describing the library's purpose.
 
 **[README.IMPLEMENTS]** RECOMMENDATION: Following the purpose and a newline, the
 `README.md` should indicate which papers the repository implements. Use the following style:
@@ -197,7 +235,7 @@ contain a one- or two-paragraph summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the current library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md); also, check [CHANGELOG.md#LIBRARY_STATUS](#changelogmd#library_status). An extra badge must be added to the `README.md` to visually indicate the library status.
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the current library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md); also, check [CHANGELOG.md#LIBRARY_STATUS](#changelogmd#library_status). An extra badge must be added to the `README.md` to visually indicate the library status - check `[README.BADGES]`.
 
 Use exactly one of the following entries for the status line:
 
@@ -221,30 +259,6 @@ or
 
 ```markdown
 **Status**: [Retired. No longer maintained or actively developed.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#retired-no-longer-maintained-or-actively-developed)
-```
-
-Use exactly one of the following entries for the status badge:
-
-```markdown
-![Library Status](https://github.com/bemanproject/beman/blob/main/images/badges/beman_badge-beman_library_under_development.svg)
-```
-
-or
-
-```markdown
-![Library Status](https://github.com/bemanproject/beman/blob/main/images/badges/beman_badge-beman_library_production_ready_api_may_undergo_changes.svg)
-```
-
-or 
-
-```markdown
-![Library Status](https://github.com/bemanproject/beman/blob/main/images/badges/beman_badge-beman_library_production_ready_stable_api.svg)
-```
-
-or
-
-```markdown
-![Library Status](https://github.com/bemanproject/beman/blob/main/images/badges/beman_badge-beman_library_retired.svg)
 ```
 
 ## CMake
