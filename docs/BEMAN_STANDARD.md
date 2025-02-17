@@ -100,7 +100,7 @@ Bad examples: `smartpointer` or `optional26`.
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
 
-**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. Check `CMAKE.USE_FETCH_CONTENT` for alternatives.
+**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. Check `CMAKE.USE_FIND_PACKAGE` for alternatives.
 
 Known exceptions:
 * [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21): A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
@@ -251,21 +251,15 @@ or
 
 **[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
 
-**[CMAKE.USE_FETCH_CONTENT]** RECOMMENDATION: The root `CMakeLists.txt` should fetch all dependency targets via [CMake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
+**[CMAKE.USE_FIND_PACKAGE]** RECOMMENDATION: The root `CMakeLists.txt` should fetch all dependency targets via [CMake `find_package`](https://cmake.org/cmake/help/latest/command/find_package.html).
 
 Use the following style:
 
 ```CMake
-FetchContent_Declare(
-    <dependency name>
-    EXCLUDE_FROM_ALL
-    GIT_REPOSITORY ${GIT_REPOSITORY}
-    GIT_TAG ${GIT_TAG}
-)
-FetchContent_MakeAvailable(<dependency name>)
+find_package(<PackageName> [REQUIRED])
 ```
 
-Check `[CMAKE.SKIP_TESTS]` in this document for a working example or [exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
+See `[CMAKE.SKIP_TESTS]` in this document for a working example or [exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
 
 
 **[CMAKE.PROJECT_NAME]** RECOMMENDATION: The CMake project name should be
@@ -341,29 +335,34 @@ generated into a `config.hpp` file at CMake configuration time. This
 Use the following style:
 
 ```CMake
-# <repo>/CMakeLists.txt
+# File: <repo>/CMakeLists.txt
 # ...
 option(
     BEMAN_<short_name>_BUILD_TESTS
     "Enable building tests and test infrastructure. Default: ON. Values: { ON, OFF }."
     ${PROJECT_IS_TOP_LEVEL}
 )
-
-if(BEMAN_<short_name>_BUILD_TESTS)
-  FetchContent_Declare(
-    googletest
-    EXCLUDE_FROM_ALL
-    GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG e39786088138f2749d64e9e90e0f9902daa77c40 # release-1.15.0
-  )
-  FetchContent_MakeAvailable(googletest)
-endif()
-
 # ...
 if(BEMAN_<short_name>_BUILD_TESTS)
   add_subdirectory(tests)
 endif()
 ```
+
+The `CMakeLists.txt` in the test directory can declare any test-only dependendencies
+that are required. For instance:
+
+
+```CMake
+# File: <repo>/tests/CMakeLists.txt
+# ...
+find_package(GoogleTest REQUIRED)
+
+add_executable(myrepo-tests)
+# ...
+gtest_discover_tests(myrepo-tests)
+```
+
+
 
 **[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies.
 
