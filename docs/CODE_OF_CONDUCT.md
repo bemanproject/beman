@@ -216,7 +216,7 @@ individuals.
 
 Only permanent resolutions, such as bans, or requests for public actions may be
 appealed. To appeal a decision of the conduct team, contact the
-[Beman leads](GOVERNANCE.md) with your appeal and
+[Beman Leads](GOVERNANCE.md) with your appeal and
 they will review the case.
 
 In general, it is **not** appropriate to appeal a particular decision in public

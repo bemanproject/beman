@@ -50,6 +50,10 @@ Questions? Maybe they have already been answered in our [FAQ](docs/FAQ.md).
 The Beman project is named in memory of Beman Dawes - co-founder of
 [Boost](https://www.boost.org).
 
+### Documentation
+
+The Beman Project has a variety of documentation available in the [docs/](./docs/) directory of this repository.
+
 ## Getting Started
 
 ```bash
