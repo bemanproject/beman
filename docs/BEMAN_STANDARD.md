@@ -100,11 +100,13 @@ Bad examples: `smartpointer` or `optional26`.
 **[REPOSITORY.CODEOWNERS]** REQUIREMENT: There must be a `.github/CODEOWNERS` file
 with a relevant set of codeowners.
 
-**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not use git submodules. Check `CMAKE.USE_FETCH_CONTENT` for alternatives.
+**[REPOSITORY.DISALLOW_GIT_SUBMODULES]** RECOMMENDATION: The repository should not
+use git submodules. Check `CMAKE.USE_FETCH_CONTENT` for alternatives.
 
 Known exceptions:
-* [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21): A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
 
+- [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21):
+A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
 
 ## Top-level
 
@@ -115,8 +117,8 @@ The top-level of a Beman library repository must consist of `CHANGELOG.md`, `CMa
 that describes the high level changes in each version of the library (e.g., library status change,
 new paper implementation addition, paper implementation removal etc). 
 
-**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
-that builds and tests (via. CTest) the library.
+**[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the
+repository's root that builds and tests (via. CTest) the library.
 
 **[TOPLEVEL.LICENSE]** REQUIREMENT: There must be a `LICENSE` file at the
 repository's root with the contents of an approved license that covers the
@@ -189,7 +191,7 @@ description.
 Examples:
 
 ```markdown
-# beman.sender_receiver: Scalable Asychronous Program Building Blocks
+# beman.sender_receiver: Scalable Asynchronous Program Building Blocks
 ```
 
 **[README.BADGES]** REQUIREMENT: Following the title, the `README.md` must have a one-line badge list. Examples: library status (`[README.LIBRARY_STATUS]`), CI status, code coverage.
@@ -228,7 +230,8 @@ or
 contain a one line summary describing the library's purpose.
 
 **[README.IMPLEMENTS]** RECOMMENDATION: Following the purpose and a newline, the
-`README.md` should indicate which papers the repository implements. Use the following style:
+`README.md` should indicate which papers the repository implements. Use the
+following style:
 
 ```markdown
 **Implements**: [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
@@ -263,9 +266,12 @@ or
 
 ## CMake
 
-**[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all targets by default (including dependency targets).
+**[CMAKE.DEFAULT]** RECOMMENDATION: The root `CMakeLists.txt` should build all
+targets by default (including dependency targets).
 
-**[CMAKE.USE_FETCH_CONTENT]** RECOMMENDATION: The root `CMakeLists.txt` should fetch all dependency targets via [CMake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
+**[CMAKE.USE_FETCH_CONTENT]** RECOMMENDATION: The root `CMakeLists.txt` should
+fetch all dependency targets via
+[CMake FetchContent](https://cmake.org/cmake/help/latest/module/FetchContent.html).
 
 Use the following style:
 
@@ -279,8 +285,8 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(<dependency name>)
 ```
 
-Check `[CMAKE.SKIP_TESTS]` in this document for a working example or [exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
-
+Check `[CMAKE.SKIP_TESTS]` in this document for a working example or
+[exemplar/blob/main/CMakeLists.txt](https://github.com/bemanproject/exemplar/blob/main/CMakeLists.txt).
 
 **[CMAKE.PROJECT_NAME]** RECOMMENDATION: The CMake project name should be
 identical to the beman library name.
@@ -350,7 +356,15 @@ generated into a `config.hpp` file at CMake configuration time. This
 `<library_name>Config.cmake` must be created which exports a
 `beman::<short_name>` target.
 
-**[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not build tests and their dependencies when `BEMAN_<short_name>_BUILD_TESTS` is set to `OFF` (see [CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html) - similar to cmake's `BUILD_TESTING`). The option is prefixed with the project so that projects can compose. Turning on testing for the top level project should not turn on testing for dependencies. Since testing is part of the normal development workflow it is appropriate to set the option on by default for the top level project.
+**[CMAKE.SKIP_TESTS]** RECOMMENDATION: The root `CMakeLists.txt` should not
+build tests and their dependencies when `BEMAN_<short_name>_BUILD_TESTS` is set
+to `OFF` (see
+[CTest docs](https://cmake.org/cmake/help/latest/module/CTest.html) - similar
+to cmake's `BUILD_TESTING`). The option is prefixed with the project so that
+projects can compose. Turning on testing for the top level project should not
+turn on testing for dependencies. Since testing is part of the normal
+development workflow it is appropriate to set the option on by default for the
+top level project.
 
 Use the following style:
 
@@ -379,7 +393,11 @@ if(BEMAN_<short_name>_BUILD_TESTS)
 endif()
 ```
 
-**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES` is set to `OFF`. The option is prefixed with the project so that projects can compose. Turning on examples for the top level project should not turn on examples for dependencies.
+**[CMAKE.SKIP_EXAMPLES]** RECOMMENDATION: The root `CMakeLists.txt` should not
+build examples and their dependencies when `BEMAN_<short_name>_BUILD_EXAMPLES`
+is set to `OFF`. The option is prefixed with the project so that projects can
+compose. Turning on examples for the top level project should not turn on
+examples for dependencies.
 
 Use the following style:
 
@@ -464,7 +482,8 @@ include
 
 **[DIRECTORY.SOURCES]** RECOMMENDATION: Sources and headers not part of the
 public interface should reside in the top-level `src/` directory, and should use
-the same structure from `include/` - e.g., `src/beman/<short_name>/`. Check `CMAKE.AVOID_PASSTHROUGHS`.
+the same structure from `include/` - e.g., `src/beman/<short_name>/`.
+Check `CMAKE.AVOID_PASSTHROUGHS`.
 
 Examples:
 
@@ -484,9 +503,10 @@ src
         └── optional.cpp
 ```
 
-**[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the top-level `tests/`
-directory, and should use the same structure from `include/`. If multiple test types are present,
-subdirectories can be made (e.g., unit tests, performance etc).
+**[DIRECTORY.TESTS]** REQUIREMENT: All test files must reside within the
+top-level `tests/` directory, and should use the same structure from
+`include/`. If multiple test types are present, subdirectories can be made
+(e.g., unit tests, performance etc).
 
 Examples:
 
@@ -512,8 +532,9 @@ tests
         └── test_utilities.hpp
 ```
 
-**[DIRECTORY.EXAMPLES]** REQUIREMENT: If present, all example files must reside within the top-level `examples/`
-directory. Each project must have at least one relevant example.
+**[DIRECTORY.EXAMPLES]** REQUIREMENT: If present, all example files must reside
+within the top-level `examples/` directory. Each project must have at least one
+relevant example.
 
 Examples:
 
@@ -524,7 +545,10 @@ examples
 └── identity_direct_usage.cpp
 ```
 
-**[DIRECTORY.DOCS]** REQUIREMENT: If present, all documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+**[DIRECTORY.DOCS]** REQUIREMENT: If present, all documentation files, except
+the root `README.md`, must reside within the top-level `docs/` directory. If
+multiple docs types are present, subdirectories can be made (e.g., dev, public
+/private etc).
 
 Examples:
 
@@ -538,7 +562,9 @@ docs
 └── optional.md
 ```
 
-**[DIRECTORY.PAPERS]** REQUIREMENT: If present, all paper related files (e.g., WIP LaTeX/Markdown projects for ISO Standardization), must reside within the top-level `papers/` directory.
+**[DIRECTORY.PAPERS]** REQUIREMENT: If present, all paper related files (e.g.,
+WIP LaTeX/Markdown projects for ISO Standardization), must reside within the
+top-level `papers/` directory.
 
 Examples:
 
@@ -553,34 +579,39 @@ papers
 
 ## File layout
 
-**[FILE.NAMES]** RECOMMENDATION: Source code and header should use the `snake_case` naming convention (similar to `LIBRARY.NAMES`).
+**[FILE.NAMES]** RECOMMENDATION: Source code and header should use the
+`snake_case` naming convention (similar to `LIBRARY.NAMES`).
 
-Examples: `identity.hpp`, `identity.cpp`, `iterator_interface.hpp` or `optional_range_support.test.cpp`.
+Examples: `identity.hpp`, `identity.cpp`, `iterator_interface.hpp` or
+`optional_range_support.test.cpp`.
 
-**[FILE.TEST_NAMES]** REQUIREMENT: Test source code files must use the `*.test.cpp` naming convention.
+**[FILE.TEST_NAMES]** REQUIREMENT: Test source code files must use the
+`*.test.cpp` naming convention.
 
-Examples: `identity.test.cpp`, `optional_ref.test.cpp` or `optional_range_support.test.cpp`.
+Examples: `identity.test.cpp`, `optional_ref.test.cpp` or
+`optional_range_support.test.cpp`.
 
 **[FILE.LICENSE_ID]** REQUIREMENT: The [SPDX license
 identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
 first possible line in all files which can contain a comment
-(e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc).
+(e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX,
+Dockerfile etc).
 
 Examples:
 
-* C++ files shall use the following form:
+- C++ files shall use the following form:
 
 ```C++
 // SPDX-License-Identifier: <SPDX License Expression>
 ```
 
-* CMake files and scripts shall use the following form:
+- CMake files and scripts shall use the following form:
 
 ```CMake
 # SPDX-License-Identifier: <SPDX License Expression>
 ```
 
-* Markdown files will use a comment following the title:
+- Markdown files will use a comment following the title:
 
 ```markdown
 # Title
@@ -595,8 +626,8 @@ copyright notice following the SPDX license identifier.
 
 ## C++
 
-**[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/` should export
-entities in the `beman::<short_name>` namespace.
+**[CPP.NAMESPACE]** RECOMMENDATION: Headers in `include/beman/<short_name>/`
+should export entities in the `beman::<short_name>` namespace.
 
 **[CPP.NO_FLAG_FORKING]** REQUIREMENT: C++ preprocessing must produce identical
 output regardless of compiler flags.
