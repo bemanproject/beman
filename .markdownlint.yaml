@@ -3,6 +3,5 @@
 MD033: false
 
 # MD013/line-length : Line length : https://github.com/DavidAnson/markdownlint/blob/v0.35.0/doc/md013.md
-# General Column Limit for code is 119.
-MD013:
-  code_block_line_length: 119
+# Disable line length check.
+MD013: false
