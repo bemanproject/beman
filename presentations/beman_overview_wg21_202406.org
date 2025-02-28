@@ -17,18 +17,18 @@
 #+date: 2024-06-24
 
 #+BEGIN_NOTES
-- 
-- 
+-
+-
 - dedicated to the beginning of Boost and our founder
 #+END_NOTES
-* 
+*
 #+BEGIN_QUOTE
 It's the End of the World as We Know It (And I Feel Fine)
 
     - R.E.M. 1987
 #+END_QUOTE
 
-#+BEGIN_NOTES 
+#+BEGIN_NOTES
 #+END_NOTES
 * [[https://github.com/bemanproject][Introducing 'The Beman Project']]
 #+BEGIN_QUOTE
@@ -73,7 +73,7 @@ The short version: the world that Boost was born in no longer exists. In additio
 #+END_NOTES
 ** 2024 Problem: Too many good c++ libraries!
 - and they aren't in Boost
-- but they are proposed for ~std::~  
+- but they are proposed for ~std::~
 - good luck testing the future!
 - quality concerns with proposals
   - Godbolt doesn't have 'a distribution base'
@@ -87,11 +87,11 @@ The short version: the world that Boost was born in no longer exists. In additio
 * The Beman Project Details
 #+BEGIN_NOTES
 - A federation of libraries proposed for standardization
-- Distribution   
+- Distribution
 - Frequent releases backed by automation
 - Header names would track standard
 - Namespace per c++ version ~beman::~
-- Include paths <beman/<libname>/<header>.hpp  
+- Include paths <beman/<libname>/<header>.hpp
 #+END_NOTES
 ** What we want
 #+BEGIN_SRC bash
@@ -121,18 +121,18 @@ int main() {
 - Highest quality
 - Production ready
 - Industry standard technology
-- Welcoming and inclusive community  
+- Welcoming and inclusive community
 #+BEGIN_NOTES
 - The best possible ~std::~ libs
   - good documentation
   - peer review outside wg21
   - real users
-- Great community  
+- Great community
   - a project with diverse contributions
   - helpful and inviting
 - Modern rapid tooling
 - Stand-alone libraries
-#+END_NOTES  
+#+END_NOTES
 ** How will it work?
 - Outreach
   - Beman team will reach out to library authors
@@ -145,7 +145,7 @@ int main() {
 - Do I need a paper before joining? - No
 - Library not for the C++ standard? Can I add to Beman Project? - No
 - Personal/work project no interest in becoming a standard library. Does the Beman Project have anything for me? - Yes
-- Licensing: Apache with LLVM exception, Boost, MIT  
+- Licensing: Apache with LLVM exception, Boost, MIT
 - Will libraries stay in Beman forever? - No (2 cycles)
 - Is there are review process like Boost? - Authors can ask the community for review
 ** Value for Library Authors
@@ -177,7 +177,7 @@ int main() {
   - Darius Neatu and Steve Downey
 - [[https://github.com/dietmarkuehl/beman-execution][beman.execution]] (P2300)
   - Dietmar Kuhl
-- Several more under discussion!    
+- Several more under discussion!
 * Thank you early contributors!
 - All the C++Now Library in a Week participants!
   - first implementation: Frank Miller
