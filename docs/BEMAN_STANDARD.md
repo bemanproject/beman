@@ -108,8 +108,7 @@ Known exceptions:
 
 ## Top-level
 
-The top-level of a Beman library repository must consist of `CMakeLists.txt`,
-`LICENSE`, and `README.md` files.
+The top-level of a Beman library repository must consist of `CMakeLists.txt`, `LICENSE`, and `README.md` files.
 
 **[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
 that builds and tests (via. CTest) the library.
