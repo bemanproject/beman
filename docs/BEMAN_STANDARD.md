@@ -108,12 +108,8 @@ Known exceptions:
 
 ## Top-level
 
-The top-level of a Beman library repository must consist of `CHANGELOG.md`, `CMakeLists.txt`,
+The top-level of a Beman library repository must consist of `CMakeLists.txt`,
 `LICENSE`, and `README.md` files.
-
-**[TOPLEVEL.CHANGELOG]** REQUIREMENT: There must be a `CHANGELOG.md` file at the repository's root
-that describes the high level changes in each version of the library (e.g., library status change,
-new paper implementation addition, paper implementation removal etc). 
 
 **[TOPLEVEL.CMAKE]** REQUIREMENT: There must be a `CMakeLists.txt` file at the repository's root
 that builds and tests (via. CTest) the library.
@@ -125,60 +121,6 @@ contents of the repository.
 **[TOPLEVEL.README]** REQUIREMENT: There must be a markdown-formatted
 `README.md` file at the repository's root that describes the library, explains how
 to build it, and links to further documentation.
-
-## `CHANGELOG.md`
-
-**[CHANGELOG.TITLE]** REQUIREMENT: The `CHANGELOG.md` must begin with a level 1
-header with the name "Changelog".
-
-**[CHANGELOG.FORMAT]** RECOMMENDATION: The `CHANGELOG.md` should be formatted using the
-[Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format.
-
-Use the following style:
-
-```markdown
-# Changelog
-
-<!--
-SPDX-License-Identifier: 2.0 license with LLVM exceptions
--->
-
-## [Unreleased]
-### Added
-- [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api) as it is production ready and the API was adopted into the C++ 26 standard.
-
-### Removed
-- Removed optional range support as P3456R3 was rejected.
-
-### Changed
-- Added optional ref support as proposed in P1234R0.
-```
-
-**[CHANGELOG.LIBRARY_STATUS]** REQUIREMENT: The `CHANGELOG.md` must contain a line for each previous library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md).
-
-Use one of the following styles:
-
-```markdown
-- [LIBRARY_STATUS]: Library status updated to [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use): It is not ready yet for production use.
-```
-
-or
-
-```markdown
-- [LIBRARY_STATUS]: Library status updated to [Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes): It is production ready but the API may undergo changes.
-```
-
-or
-
-```markdown
-- [LIBRARY_STATUS]: Library status updated to [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api): It is production ready and the API was adopted into the C++ 26 standard.
-```
-
-or 
-
-```markdown
-- [LIBRARY_STATUS]: Library status updated to [Retired. No longer maintained or actively developed.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#retired-no-longer-maintained-or-actively-developed): It was rejected from ISO standardization.
-```
 
 ## `README.md`
 
