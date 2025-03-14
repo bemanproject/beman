@@ -176,30 +176,40 @@ contain a one line summary describing the library's purpose.
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
-**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the current library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md); also, check [CHANGELOG.md#LIBRARY_STATUS](#changelogmd#library_status). An extra badge must be added to the `README.md` to visually indicate the library status - check `[README.BADGES]`.
+**[README.LIBRARY_STATUS]** REQUIREMENT: Following the implements section and a newline, the `README.md` must indicate the library status history with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md). An extra badge must be added to the `README.md` to visually indicate the library status - check `[README.BADGES]`.
 
-Use exactly one of the following entries for the status line:
+Use a table with the following style:
 
 ```markdown
-**Status**: [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use)
+|Date|**Library status**|Commit|Notes|
+|----|--------------|------|-----|
+| June 2025 |[Production ready. Stable API.](...)|[abc](https://github.com/bemanproject/exemplar/commit/abc)|All implemented papers where accepted into the C++26 Standard.|
+| December 2024 |[Production ready. API may undergo changes.](...)|[abc](https://github.com/bemanproject/exemplar/commit/abc)|Library became production ready, but the API is still in the standardization pipeline for C++26.|
+| June 2024 |[Under development and not yet ready for production use.](...)|[abc](https://github.com/bemanproject/exemplar/commit/abc)|Start the library development.|
+```
+
+Use exactly one of the following entries for the library status column:
+
+```markdown
+[Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use)
 ```
 
 or 
 
 ```markdown
-**Status**: [Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes)
+[Production ready. API may undergo changes.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-api-may-undergo-changes)
 ```
 
 or
 
 ```markdown
-**Status**: [Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api)
+[Production ready. Stable API.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#production-ready-stable-api)
 ```
 
 or 
 
 ```markdown
-**Status**: [Retired. No longer maintained or actively developed.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#retired-no-longer-maintained-or-actively-developed)
+[Retired. No longer maintained or actively developed.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#retired-no-longer-maintained-or-actively-developed)
 ```
 
 ## CMake
