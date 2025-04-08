@@ -105,6 +105,9 @@ with a relevant set of codeowners, starting with the local codeowners and ending
 Known exceptions:
 * [mpark/wg21: Framework for Writing C++ Committee Papers](https://github.com/mpark/wg21): A non-C++ submodule designed for drafting ISO C++ papers using LaTeX or Markdown.
 
+## Release
+
+**[RELEASE.GODBOLT_TRUNK_VERSION]** RECOMMENDATION: A Beman library should have at least a trunk version deployed on godbolt with nightyclone mode activated. Check [tutorial: Compiler Explorer Deployment](../tutorials/compiler-explorer-deployment.md)
 
 ## Top-level
 
