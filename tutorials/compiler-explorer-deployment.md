@@ -53,7 +53,7 @@ drwxr-xr-x  25 dariusn  wheel   800 Apr  7 21:29 compiler-explorer
 
 $ cd infra/
 $ make ce
-$ compiler-infra [main] bin/ce_install --enable nightly install beman_optional
+$ bin/ce_install --enable nightly install beman_optional
 ...
  2025-04-07 23:05:07,137 lib.ce_install  INFO     libraries/c++/nightly/beman_optional main installed OK
 1 packages installed OK, 0 skipped, and 0 failed installation
