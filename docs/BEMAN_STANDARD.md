@@ -115,7 +115,7 @@ Known exceptions:
 1. A title that clearly indicates the release version and purpose.
 2. An "About" section describing the main purpose and impact of the release.
 3. A "Release Maturity" section indicating the current status of the library according to the [Beman Library Maturity Model](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md).
-4. A "What's Changed" section listing all changes, organized by:
+4. A "Changelog" section listing all changes, organized by:
    - Breaking changes (if any)
    - New features and improvements
    - Bug fixes
