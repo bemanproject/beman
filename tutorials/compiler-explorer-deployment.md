@@ -134,7 +134,7 @@ int main() { return beman::optional<int>{}.empty(); }
   3.7. Mirror changes from `etc/config/c++.local.properties` to `etc/config/c++.amazon.properties` (need to find the place to insert the new Beman library alongside the existing ones).
 
 ```bash
-compiler-explorer [main] $ cat etc/config/c++.amazon.properties | grep -A3 -B3 beman_optional
+$ cat etc/config/c++.amazon.properties | grep -A3 -B3 beman_optional
 /c++.amazon.properties
 #################################
 #################################
