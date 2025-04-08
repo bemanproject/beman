@@ -224,4 +224,4 @@ libs.beman_iterator_interface.versions.trunk.lookupversion=main
 
 ## Non header-only library
 
-Currently, there are no such usages for such Beman libraries. 
+Currently, there are no such usages inside The Beman Project. 
