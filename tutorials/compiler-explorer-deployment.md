@@ -216,4 +216,4 @@ libs.beman_iterator_interface.versions.trunk.lookupversion=main
 
 ## Non header-only library
 
-Currently, we don't have usages for such Beman libraries. We'll update the cheatsheet with instructions from [compiler-explorer: Adding a new library](https://github.com/compiler-explorer/compiler-explorer/blob/main/docs/AddingALibrary.md) when the first Beman example will be available.
+Currently, there are no such usages for such Beman libraries. 
