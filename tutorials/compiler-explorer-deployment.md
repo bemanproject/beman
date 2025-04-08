@@ -162,7 +162,7 @@ libs.benchmark.name=Google Benchmark
 
 Instructions are similar to previous section, but a build command neededs to be run to properly generate final deployable header.
 
-For example, to deploy / install `beman.iterator_interface` on Compiler Explorer, we follow previous steps:
+For example, to deploy / install `beman.iterator_interface` on Compiler Explorer, we follow the previous steps:
 
 * Updates in `infra/bin/yaml/libraries.yaml`:
 
