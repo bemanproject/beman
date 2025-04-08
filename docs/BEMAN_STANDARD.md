@@ -110,7 +110,7 @@ Known exceptions:
 **[RELEASE.GITHUB]**: REQUIREMENT: All Beman libraries must be released using [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
 
 
-**[RELEASE_NOTES]**: RECOMMENDATION: Release should include:
+**[RELEASE.NOTES]**: RECOMMENDATION: Release should include:
 
 1. A title that clearly indicates the release version and purpose.
 2. An "About" section describing the main purpose and impact of the release.
