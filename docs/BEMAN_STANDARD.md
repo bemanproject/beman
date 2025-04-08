@@ -107,7 +107,7 @@ Known exceptions:
 
 ## Release
 
-**[RELEASE_GITHUB]**: REQUIREMENT: All Beman libraries must be released using [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
+**[RELEASE.GITHUB]**: REQUIREMENT: All Beman libraries must be released using [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github).
 
 
 **[RELEASE_NOTES]**: RECOMMENDATION: Release should include:
