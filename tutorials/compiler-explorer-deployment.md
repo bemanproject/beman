@@ -102,7 +102,8 @@ libs.beman_optional.versions.trunk.path=/opt/compiler-explorer/libs/beman_option
   3.2. Start local deployment:
 
 ```bash
-$ compiler-explorer [main] $ make
+$ cd compiler-explorer/
+$ make
 ...
 info:   Listening on http://localhost:10240/
 ...
