@@ -59,7 +59,7 @@ $ compiler-infra [main] bin/ce_install --enable nightly install beman_optional
 1 packages installed OK, 0 skipped, and 0 failed installation
 ```
 
-Notes: Tested on `MacOS` and `Ubuntu`.
+Notes: Tested on `MacOS 14.6` (aarch64) and `Ubuntu 24.04` (aarch64).
 
   2.4. On success, you can find the new Beman library deployed on local setup in `/opt/compiler-explorer`. E.g., for `beman.optional` installation should see this tree:
 
