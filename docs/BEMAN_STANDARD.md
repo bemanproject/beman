@@ -107,7 +107,7 @@ Known exceptions:
 
 ## Release
 
-**[RELEASE.GODBOLT_TRUNK_VERSION]** RECOMMENDATION: A Beman library should have at least a trunk version deployed on godbolt with nightyclone mode activated. Check [tutorial: Compiler Explorer Deployment](../tutorials/compiler-explorer-deployment.md)
+**[RELEASE.GODBOLT_TRUNK_VERSION]** RECOMMENDATION: A Beman library should have at least a trunk version deployed on godbolt with nightyclone mode activated. Check [tutorial: Compiler Explorer Deployment](../tutorials/compiler-explorer-deployment.md).
 
 ## Top-level
 
