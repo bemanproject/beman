@@ -136,7 +136,7 @@ Use the following format:
 
 This release has a status of [Under development and not yet ready for production use.](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_LIBRARY_MATURITY_MODEL.md#under-development-and-not-yet-ready-for-production-use).
 
-## What's Changed
+## Changelog
 
 * <description change> by @${USER} in https://github.com/bemanproject/${REPO}/pull/${PR_ID}
 * ...
