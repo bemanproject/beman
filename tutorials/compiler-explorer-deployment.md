@@ -10,7 +10,11 @@ Full instructins are available at [compiler-explorer: Adding a new library](http
 
 ### Step by step example: `beman.optional`
 
-1. Clone Compiler Explorer repos: <https://github.com/compiler-explorer/infra> and <https://github.com/compiler-explorer/compiler-explorer>.
+1. Clone Compiler Explorer repos:
+
+```bash
+$ git clone https://github.com/compiler-explorer/infra
+$ git clone https://github.com/compiler-explorer/compiler-explorer
 2. Update `infra/`:
 
    2.1. Locate an existing Beman library inside `bin/yaml/libraries.yaml` - e.g. search for `repo: bemanproject/optional`.
