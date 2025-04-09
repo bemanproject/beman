@@ -64,20 +64,38 @@ Notes: Tested on `MacOS 14.6` (aarch64) and `Ubuntu 24.04` (aarch64).
   2.4. On success, you can find the new Beman library deployed on local setup in `/opt/compiler-explorer`. E.g., for `beman.optional` installation should see this tree:
 
 ```bash
-$ tree /opt/compiler-explorer/libs/beman_optional
+$ tree --charset=ascii /opt/compiler-explorer/libs/beman_optional
 /opt/compiler-explorer/libs/beman_optional
-└── main
-    ├── include
-    │   └── beman
-    │       └── optional
-    │           ├── CMakeLists.txt
-    │           ├── detail
-    │           │   ├── iterator.hpp
-    │           │   └── stl_interfaces
-    │           │       ├── config.hpp
-    │           │       ├── fwd.hpp
-    │           │       └── iterator_interface.hpp
-    │           └── optional.hpp
+`-- main
+    |-- ...
+    |-- examples
+    |   |-- CMakeLists.txt
+    |   |-- README.md
+    |   |-- concept_checks.cpp
+    |   |-- optional_ref.cpp
+    |   |-- pythagorean_triples.cpp
+    |   |-- range_loop.cpp
+    |   |-- sample.cpp
+    |   `-- std_vs_beman.cpp
+    |-- include
+    |   `-- beman
+    |       `-- optional
+    |           |-- CMakeLists.txt
+    |           |-- detail
+    |           |   |-- iterator.hpp
+    |           |   `-- stl_interfaces
+    |           |       |-- config.hpp
+    |           |       |-- fwd.hpp
+    |           |       `-- iterator_interface.hpp
+    |           `-- optional.hpp
+    |-- papers
+    |   `-- ...
+    `-- tests
+        `-- beman
+            `-- optional
+                |-- ...
+                |-- optional.t.cpp
+                ...
 ```
 
 Note: Currently, we copy the entire tree (including build files, docs, tests etc). In [#111: Skip unnecessary files in Compiler Explorer deployments](https://github.com/bemanproject/beman/issues/111) will ensure that only required files are copied.
