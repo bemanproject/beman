@@ -132,22 +132,22 @@ info:   Listening on http://localhost:10240/
 ```cpp
 #include <beman/optional/optional.hpp>
 
-int main() { return beman::optional<int>{26}.value(); }
+int main() { return beman::optional::optional<int>{26}.value(); }
 ```
 
-<img width="1725" alt="image" src="https://github.com/user-attachments/assets/afe0abd8-e92e-40c2-8843-7b7011092650" />
+![](./images/godbolt-example-step01-compile-eror.png)
 
   3.4. Go to `Include libs`:
 
-<img width="1727" alt="image" src="https://github.com/user-attachments/assets/102c5da5-d48d-4331-a741-4a5bbf5c607b" />
+![](./images/godbolt-example-step02-go-to-libs.png)
 
   3.5. Search for your library - e.g. `beman.optional` - and selected deployed version - e.g. `trunk`:
 
-<img width="1723" alt="image" src="https://github.com/user-attachments/assets/c2098e41-8cee-4cba-9d95-c1bfef2cb943" />
+![](./images/godbolt-example-step03-select-lib-trunk.png)
 
   3.6. Your local deployment is working!
 
-<img width="1726" alt="image" src="https://github.com/user-attachments/assets/00ab62b6-011c-4490-923c-43ea83a2d4de" />
+![](./images/godbolt-example-step04-ok.png)
 
   3.7. Mirror changes from `etc/config/c++.local.properties` to `etc/config/c++.amazon.properties` (need to find the place to insert the new Beman library alongside the existing ones).
 
