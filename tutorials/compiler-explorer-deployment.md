@@ -114,7 +114,7 @@ info:   Listening on http://localhost:10240/
 ```cpp
 #include <beman/optional/optional.hpp>
 
-int main() { return beman::optional<int>{}.empty(); }
+int main() { return beman::optional<int>{26}.value(); }
 ```
 
 <img width="1725" alt="image" src="https://github.com/user-attachments/assets/afe0abd8-e92e-40c2-8843-7b7011092650" />
