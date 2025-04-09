@@ -167,8 +167,9 @@ This release has a status of [Under development and not yet ready for production
 
 Complete examples can be found in [https://github.com/bemanproject/exemplar/releases](https://github.com/bemanproject/exemplar/releases).
 
-Here is a visualization of a release in exemplar: 
-<img width="1722" alt="image" src="https://github.com/user-attachments/assets/785ddf04-0ac9-41f8-acc8-d5a49c9897a9" />
+Here is snapshot of notes for a particular release in `examplar`:
+
+![](./images/release-notes-examples.png)
 
 ## Top-level
 
