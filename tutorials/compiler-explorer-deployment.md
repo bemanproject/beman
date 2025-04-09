@@ -10,14 +10,14 @@ Full instructins are available at [compiler-explorer: Adding a new library](http
 
 ### Step by step example: `beman.optional`
 
-1. Clone Compiler Explorer repos:
+#### 1. Clone Compiler Explorer repos
 
 ```bash
 $ git clone https://github.com/compiler-explorer/infra
 $ git clone https://github.com/compiler-explorer/compiler-explorer
 ```
 
-2. Update `infra/`:
+#### 2. Update `infra`
 
    2.1. Locate an existing Beman library inside `bin/yaml/libraries.yaml` - e.g. search for `repo: bemanproject/optional`.
 
@@ -102,7 +102,7 @@ Note: Currently, we copy the entire tree (including build files, docs, tests etc
 
   2.5. Commit `bin/yaml/libraries.yaml` and push the changes upstream! (PR instructions at step 4)
 
-3. Update `compiler-explorer/`:
+#### 3. Update `compiler-explorer`
 
   3.1. Locate or create `etc/config/c++.local.properties`. Add your entry according to Compiler Explorer docs (examples also in `etc/config/c++.amazon.properties`). For example, for adding `beman.optional` from step 2, do this:
 
@@ -173,7 +173,7 @@ libs.benchmark.name=Google Benchmark
 
   3.8. Commit `etc/config/c++.amazon.properties`. Commit and push the changes upstream! (PR instructions at step 4)
 
-4. Open PRs:
+#### 4. Open PRs
    4.1. Open issues in Compiler Explorer repo. Example: <https://github.com/compiler-explorer/compiler-explorer/issues/6651>.
 
    4.2.: Open PR with change from `bin/yaml/libraries.yaml` in <https://github.com/compiler-explorer/infra>. Commit example: <https://github.com/compiler-explorer/infra/commit/96d504ac2d39212d22fc3dc5f8c7be3909457d29>.
@@ -190,7 +190,14 @@ Instructions are similar to previous section, but a build command neededs to be 
 
 For example, to deploy / install `beman.iterator_interface` on Compiler Explorer, we follow the previous steps:
 
-* Updates in `infra/bin/yaml/libraries.yaml`:
+#### 1. Clone Compiler Explorer repos
+
+Same as in [Integrating a header-only library](#integrating-a-header-only-library).
+
+#### 2. Updates in `infra`
+
+
+Update `infra/bin/yaml/libraries.yaml`:
 
 ```yaml
 ...
@@ -222,7 +229,10 @@ Notes:
 * `lib_type: static`: Generate a static library.
 * `package_install: true`: Install build artifacts.
 
-* Updates in `compiler-explorer/etc/config/c++.amazon.properties`:
+#### 3. Update `compiler-explorer`
+
+
+Update: `compiler-explorer/etc/config/c++.amazon.properties`:
 
 ```yaml
 ...
@@ -238,7 +248,11 @@ libs.beman_iterator_interface.versions.trunk.lookupversion=main
 ...
 ```
 
-* Same testing instructions as per [Integrating a header only library](#integrating-a-header-only-library).
+* Same testing instructions as in [Integrating a header-only library](#integrating-a-header-only-library)
+
+#### 4. Open PRs
+
+Same as in [Integrating a header-only library](#integrating-a-header-only-library).
 
 ## Non header-only library
 
