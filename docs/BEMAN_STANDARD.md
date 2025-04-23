@@ -167,9 +167,9 @@ This release has a status of [Under development and not yet ready for production
 
 Complete examples can be found in [https://github.com/bemanproject/exemplar/releases](https://github.com/bemanproject/exemplar/releases).
 
-Here is snapshot of notes for a particular release in `examplar`:
+Here is snapshot of notes for a particular release in `exemplar`:
 
-![](./images/release-notes-examples.png)
+![](/images/release-notes-examples.png)
 
 
 **[RELEASE.GODBOLT_TRUNK_VERSION]** RECOMMENDATION: A Beman library should have at least a trunk version deployed on godbolt with nightyclone mode activated. Check [tutorial: Compiler Explorer Deployment](/tutorials/compiler-explorer-deployment.md).
