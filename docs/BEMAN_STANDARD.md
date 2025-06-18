@@ -264,7 +264,8 @@ If the library has been deployed onto Compiler Explorer, add this badge and repl
 
 ### **[README.PURPOSE]**
 
-**RECOMMENDATION**: Following the badges list and a newline, the `README.md` should contain a one line summary describing the library's purpose.
+**RECOMMENDATION**: Following the badges list and a newline,
+the `README.md` should contain a one line summary describing the library's purpose.
 
 Use the following style:
 
@@ -275,7 +276,9 @@ Use the following style:
 ### **[README.IMPLEMENTS]**
 
 **RECOMMENDATION**: Following the purpose and a newline, the
-`README.md` should indicate which papers the repository implements. Use the following style:
+`README.md` should indicate which papers the repository implements.
+
+Use the following style:
 
 ```markdown
 **Implements**: [`std::optional<T&>` (P2988R5)](https://wg21.link/P2988R5) and
