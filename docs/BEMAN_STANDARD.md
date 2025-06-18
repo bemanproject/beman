@@ -266,6 +266,12 @@ If the library has been deployed onto Compiler Explorer, add this badge and repl
 
 **RECOMMENDATION**: Following the badges list and a newline, the `README.md` should contain a one line summary describing the library's purpose.
 
+Use the following style:
+
+```markdown
+**Purpose**: This repository implements `std::optional` extensions targeting C++26. The `beman.optional` library aims to evaluate the stability, the usability, and the performance of these proposed changes before they are officially adopted by WG21 into the C++ Working Draft. Additionally, it allows developers to use these new features before they are implemented in major standard library compilers.
+```
+
 ### **[README.IMPLEMENTS]**
 
 **RECOMMENDATION**: Following the purpose and a newline, the
