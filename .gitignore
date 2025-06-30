@@ -1,1 +1,8 @@
 build
+
+# ignore emacs temp files
+*~
+\#*\#
+
+# ignore vscode settings
+.vscode
