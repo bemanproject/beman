@@ -112,7 +112,7 @@ Bad examples: `smartpointer` or `optional26`.
 
 **REQUIREMENT**: The repository must have `main` as default branch.
 
-You can change the `default branch` via default repository settings menu - e.g., [exemplar/settings](https://github.com/bemanproject/exemplar/settings). 
+You can change the `default branch` via default repository settings menu - e.g., [exemplar/settings](https://github.com/bemanproject/exemplar/settings).
 
 Here is snapshot of `default branch` settings in `exemplar` repository:
 
@@ -575,6 +575,61 @@ add_subdirectory(beman) # Don't do this
 
 # <repo>/src/beman/CMakeLists.txt
 add_subdirectory(optional) # Don't do this
+```
+
+###  **[CMAKE.IMPLICIT_DEFAULTS]**
+
+**RECOMMENDATION**: Where CMake commands have reasonable default values, and the project does not intend to change those values, the parameters should be left implicitly defaulted rather than enumerated in the command.
+
+Example:
+
+```CMake
+# Not recommended
+# Explicitly enumerated defaults for install artifact destinations
+install(
+    TARGETS beman.project
+    EXPORT beman.project-targets
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+    FILE_SET HEADERS
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
+
+# Recommended, implicit defaults
+install(
+    TARGETS beman.project
+    EXPORT beman.project-targets
+    FILE_SET HEADERS
+)
+```
+
+### **[CMAKE.NO_SINGLE_USE_VARS]**
+
+**RECOMMENDATION**: `set()` should not be used to create variables that are only used once. Prefer using the value(s) directly in such cases.
+
+Example:
+
+```CMake
+# Not recommended, single-use variable for the source list
+set(SOURCES
+    a.cpp
+    b.cpp
+    c.cpp
+)
+
+# ...
+
+target_sources(beman.project PRIVATE ${SOURCES})
+
+# Recommended, list sources directly
+
+target_sources(beman.project
+    PRIVATE
+        a.cpp
+        b.cpp
+        c.cpp
+)
 ```
 
 ## Directory layout
