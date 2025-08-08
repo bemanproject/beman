@@ -8,7 +8,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 The following documents code review processes for the Beman Project organization.
 
-* As stated in [REPOSITORY.CODEOWNERS](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_STANDARD.md#repositorycodeowners), a list of local reviewers is available for each repository, and automated code review rules are enforced via [REPOSITORY.CODE_REVIEW_RULES](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_STANDARD.md#repositorycode_review_rules).
+* As stated in [repository.codeowners](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_STANDARD.md#repositorycodeowners), a list of local reviewers is available for each repository, and automated code review rules are enforced via [repository.code_review_rules](https://github.com/bemanproject/beman/blob/main/docs/BEMAN_STANDARD.md#repositorycode_review_rules).
 
 * By default, all PRs are reviewed by at least one code owner.
 
