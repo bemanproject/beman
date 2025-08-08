@@ -28,10 +28,7 @@ Libraries not falling in this category are out of scope.
 ## I have a personal/work project but I have no interest in it becoming a standard library. Does the Beman Project have anything for me?
 
 Yes!
-In our effort to create the highest-quality C++ libraries, we've established a set of templates, tools, and guidelines that are broadly applicable even for projects not destined to be standardized:
-
-* Our [Example Project](https://github.com/bemanproject/example) demonstrates a useful structure for organizing libraries
-* Our [CI Project](https://github.com/bemanproject/ci) utilizes Github Workflows to automate building, testing, and releasing libraries.
+In our effort to create the highest-quality C++ libraries, we've established a set of templates, tools, and guidelines that are broadly applicable even for projects not destined to be standardized. For example, our [Exemplar Project](https://github.com/bemanproject/exemplar) demonstrates a useful structure for organizing libraries
 
 ## Will libraries stay in Beman forever?
 
