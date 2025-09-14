@@ -325,6 +325,8 @@ If the library has been deployed onto Compiler Explorer, add this badge and repl
 [Give *std::optional* Range Support (P3168R1)](https://wg21.link/P3168R1).
 ```
 
+Note that specifying the revision number is optional.
+
 ### **[readme.library_status]**
 
 **Requirement**: Following the implements section and a newline, the `README.md` must indicate the **current** library status with respect to the [Beman library maturity model](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md). An extra badge must be added to the `README.md` to visually indicate the library status (check `[readme.badges]`). Note: The full library status history can be found in the GitHub release notes.
