@@ -41,7 +41,7 @@ Maybe they have already been answered in our [FAQ](/docs/faq.md).
 
 ### About the Name
 
-The Beman project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
+The Beman Project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
 
 ### Documentation
 
