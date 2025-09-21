@@ -8,7 +8,7 @@ The Beman Project is dedicated to providing the guidance and facilities to ensur
 We help library authors with development best practices, peer review, and contributing to the C++ standard.
 We distribute the libraries proposed for standardization to facilitate early usage and feedback.
 
-The Beman project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
+The Beman Project is named in memory of Beman Dawes - co-founder of [Boost](https://www.boost.org).
 
 # 2. Membership
 
