@@ -46,3 +46,8 @@ The Beman Project is named in memory of Beman Dawes - co-founder of [Boost](http
 ### Documentation
 
 The Beman Project has a variety of documentation available in the [docs/](/docs/) directory of this repository.
+
+### Updates
+Note! "Beman" project will be submitted to the 2026 GSOC program, and we would love your participation!
+* Students - please fill in this form: https://forms.gle/tKRKZjvEuDZLVX1x5
+* Mentors - please register here: https://forms.gle/XR3Zk9q5rxFd5Nmm7
