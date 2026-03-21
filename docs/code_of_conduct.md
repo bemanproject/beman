@@ -99,12 +99,12 @@ spaces:
     Maybe meet over VC (video call) instead.
     Switching approaches can help resume progress.
 
-No weapons are allowed at Beman Project events. 
+No weapons are allowed at Beman Project events.
 Weapons include, but are not limited to, explosives (including fireworks), guns, and large knives such as those used
 for hunting or display, as well as any other item used for the purpose of causing injury or harm to others.
 
 In rare cases, violations of this code _outside_ of these spaces may affect, and be detrimental to, a person’s ability to participate _within_ these spaces.
-Important examples include, but are not limited to, [sexual and gender-based violence and/or harassment](https://hr.un.org/sites/hr.un.org/files/SEA%20Glossary%20%20%5BSecond%20Edition%20-%202017%5D%20-%20English_0.pdf), [hate crimes](https://hatecrime.osce.org/), and [hate speech](https://www.un.org/en/genocideprevention/documentsUN%20Strategy%20and%20Plan%20of%20Action%20on%20Hate%20Speech%2018%20June%20SYNOPSIS.pdf).
+Important examples include, but are not limited to, [sexual and gender-based violence and/or harassment](https://hr.un.org/sites/hr.un.org/files/SEA%20Glossary%20%20%5BSecond%20Edition%20-%202017%5D%20-%20English_0.pdf), [hate crimes](https://hatecrime.osce.org/), and [hate speech](https://www.un.org/en/genocideprevention/documents/UN%20Strategy%20and%20Plan%20of%20Action%20on%20Hate%20Speech%2018%20June%20SYNOPSIS.pdf).
 Although we do not conduct proactive research, we have an obligation to respond
 to reported and, to the extent possible, corroborated concerns.
 Our motivations are not rooted in responding punitively, or holding people accountable.
@@ -125,22 +125,22 @@ If you believe someone is violating the code of conduct, you can report it to th
 **All reports will be kept confidential**, and are only used by the conduct team
 to address conduct issues and keep the Beman Project community safe and inclusive.
 
-Please send reports concerning a member of the conduct team directly to other members of the conduct team. 
+Please send reports concerning a member of the conduct team directly to other members of the conduct team.
 This allows discussion of the complaint to more easily exclude the concerned member as a [special case](#special-cases).
 
 If you believe anyone is in **physical danger**, please notify appropriate law enforcement first.
 If you are unsure what law enforcement agency is appropriate, please include this in your report and we will attempt to notify them.
 
-If the violation occurs at an event and requires immediate attention, you can also reach out to any of the event organizers or staff. 
-Event organizers and staff will be prepared to handle the incident and be able to help. 
+If the violation occurs at an event and requires immediate attention, you can also reach out to any of the event organizers or staff.
+Event organizers and staff will be prepared to handle the incident and be able to help.
 If you cannot find one of the organizers, the venue staff can locate one for you.
 Specific event information will include detailed contact information for that event.
 In person reports will still be kept confidential exactly as above, but also feel free to email the conduct team, anonymously if needed.
 
 ### Filing a report
 
-Reports can be as formal or informal as needed for the situation at hand. 
-If possible, please include as much information as you can. 
+Reports can be as formal or informal as needed for the situation at hand.
+If possible, please include as much information as you can.
 If you feel comfortable, please consider including:
 
 *   Your contact info, so we can get in touch with you if we need to follow up.
@@ -166,13 +166,13 @@ The conduct team will review the incident as soon as possible and try to determi
     physical safety.
 
 If this is determined to be an ongoing incident or a threat to physical safety,
-the conduct team's immediate priority will be to protect everyone involved. 
+the conduct team's immediate priority will be to protect everyone involved.
 This means we may delay an "official" response until we believe that the situation has ended and that everyone is physically safe.
 
 The conduct team will try to contact other parties involved or witnessing the event to gain clarity on what happened and understand any different
 perspectives.
 
-Once the conduct team has a complete account of the events they will make a decision as to how to respond. 
+Once the conduct team has a complete account of the events they will make a decision as to how to respond.
 Responses may include:
 
 *   Nothing, if no violation occurred or it has already been appropriately resolved.
@@ -186,24 +186,24 @@ Once we’ve determined our response, we will separately contact the original re
 taking. We will take into account feedback from the individuals involved on the
 appropriateness of our response, but we don’t guarantee we’ll act on it.
 
-After any incident, the Beman Project leads may choose to make a public statement about the incident. 
+After any incident, the Beman Project leads may choose to make a public statement about the incident.
 If that’s the case, the identities of anyone involved will remain confidential unless instructed otherwise by those individuals.
 
 ### Appealing
 
-Only permanent resolutions, such as bans, or requests for public actions may be appealed. 
+Only permanent resolutions, such as bans, or requests for public actions may be appealed.
 To appeal a decision of the conduct team, contact the [Beman leads](governance.md) with your appeal and they will review the case.
 
 In general, it is **not** appropriate to appeal a particular decision in public
-areas of GitHub or Discord. 
-Doing so would involve disclosure of information which should remain confidential. 
-Disclosing this kind of information publicly may be considered a separate and, potentially, more serious violation of the Code of Conduct. 
+areas of GitHub or Discord.
+Doing so would involve disclosure of information which should remain confidential.
+Disclosing this kind of information publicly may be considered a separate and, potentially, more serious violation of the Code of Conduct.
 This is not meant to limit discussion of the Code of Conduct, the conduct team itself, or the appropriateness of responses in general, but **please** refrain from mentioning specific facts about cases without the explicit permission of all parties involved.
 
 ### Special cases
 
 If a complaint is raised against a member of the Beman Project leads, they will be excluded from conduct discussion and decisions, including appeals.
-They will only be included as needed for an involved party, such as to get their perspective or to notify them of decisions. 
+They will only be included as needed for an involved party, such as to get their perspective or to notify them of decisions.
 Such complaints may lead to a member's responsibilities being revoked.
 
 ## Enforcement action guidelines
@@ -219,7 +219,7 @@ involved:
         the code of conduct.
     *   **Action:** A private, written message providing clarity around the
         nature of the violation and an explanation of why the behavior was
-        inappropriate. 
+        inappropriate.
         A public apology may be requested.
 1.  **Warning**
     *   **Behavior:** A code of conduct violation through a single moderate
@@ -227,13 +227,13 @@ involved:
     *   **Action:** In addition to the correction action, a temporary
         restriction forbidding interaction with the people involved for a
         specified period of time, including unsolicited interaction with the
-        conduct team. 
+        conduct team.
         Violating these terms may lead to a ban.
 1.  **Temporary ban**
     *   **Behavior:** A serious violation of the code of conduct, including
         sustained inappropriate behavior.
     *   **Action:** In addition to the warning action, a temporary ban from use
-        of Beman Project's community spaces for a specified period of time. External channels, such as social media, should not be used to bypass these restrictions during the temporary ban. 
+        of Beman Project's community spaces for a specified period of time. External channels, such as social media, should not be used to bypass these restrictions during the temporary ban.
         Violating these terms may lead to a permanent ban.
 1.  **Permanent ban**
     *   **Behavior:** Demonstrating a pattern of violation of the code of
