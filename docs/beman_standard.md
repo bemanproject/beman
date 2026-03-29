@@ -744,7 +744,7 @@ examples
 
 ### **[directory.docs]**
 
-**Requirement**: If present, all documentation files, except the root `README.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
+**Requirement**: If present, all documentation files, except the root `README.md` and `CONTRIBUTING.md`, must reside within the top-level `docs/` directory. If multiple docs types are present, subdirectories can be made (e.g., dev, public/private etc).
 
 Examples:
 
