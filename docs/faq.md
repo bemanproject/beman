@@ -37,10 +37,15 @@ The current concept is that libraries will be gradually deprecated as official s
 
 ## Is there a review process like Boost?
 
-No!
-Inclusion in Beman doesn't depend on passing a formal review.
-That said, authors can ask the community for reviews at any time!
-Also, we expect libraries to evolve and using the code review facilities allows authors to get other eyes on updates as proposals evolve.
+Yes, but different!
+Initial inclusion in Beman doesn't depend on passing a formal review. However, during initial development
+we encourage on-going reviews of changes over time - just as would be done in a production code base.
+We understand that libraries evolve and using the github code review facilities allows authors to recieve
+ongoing feedback. And, of course, authors can ask the community for reviews at any time!
+
+The one required review is when a library moves from *under development* to a *production ready* state. The discussion of this process can be found
+[here](https://bemanproject.org/docs/beman_library_maturity_model#review-process-for-transitioning-a-library-to-production-ready "production ready review").
+
 
 ## Is there a minimum C++ version required for all Beman Projects to support?
 
@@ -50,3 +55,4 @@ nor does it define a lower boundary for the minimum C++ version to support.
 The C++ version support range is decided by the library author and differs across projects.
 Note that given the nature of the Beman Project,
 it is likely that you'll need to use recent releases of the C++ standard to play around with the projects.
+Almost all Beman libraries require at least c++20 due to concepts.
