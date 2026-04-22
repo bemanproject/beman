@@ -43,7 +43,7 @@ Note: When making minor changes such as fixing typos, correcting grammar mistake
 
 ### Conventions
 
-This standard consists of entries that include an all-caps, dot-separated
+This standard consists of entries that include a lowercase, dot-separated
 identifier for referencing.
 
 With the exception of the core principles, these entries are either rules or
