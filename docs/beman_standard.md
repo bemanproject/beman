@@ -4,7 +4,7 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 # The Beman Standard
 
-This document specifies rules and recommendations for Beman project libraries.
+This document specifies requirements and recommendations for Beman project libraries.
 Its goal is to create consistency facilitating the evaluation of, and
 contribution to Beman libraries.
 
@@ -46,7 +46,7 @@ Note: When making minor changes such as fixing typos, correcting grammar mistake
 This standard consists of entries that include a lowercase, dot-separated
 identifier for referencing.
 
-With the exception of the core principles, these entries are either rules or
+With the exception of the core principles, these entries are either requirements or
 recommendations.
 
 - **Requirements** must be followed in order to conform to this standard. These entries
