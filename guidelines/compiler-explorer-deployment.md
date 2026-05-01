@@ -4,22 +4,27 @@ SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 # Tutorial: Compiler Explorer Deployment
 
-Full instructins are available at [compiler-explorer: Adding a new library](https://github.com/compiler-explorer/compiler-explorer/blob/main/docs/AddingALibrary.md). This page is a Beman cheatsheet.
+Full instructions are available at [compiler-explorer: Adding a new library](https://github.com/compiler-explorer/compiler-explorer/blob/main/docs/AddingALibrary.md). This page is a Beman cheatsheet.
 
 ## Integrating a header-only library
 
 ### Step by step example: `beman.optional`
 
-#### 1. Clone Compiler Explorer repos
+#### 1. Fork and clone Compiler Explorer repos:
 
+  1.1. Fork main repo: [compiler-explorer/compiler-explorer](https://github.com/compiler-explorer/compiler-explorer)
+  
+  1.2. Fork infra repo: [compiler-explorer/infra](https://github.com/compiler-explorer/infra)
+
+  1.3. Clone own repos
 ```bash
-$ git clone https://github.com/compiler-explorer/infra
-$ git clone https://github.com/compiler-explorer/compiler-explorer
+$ git clone https://github.com/<your_username>/compiler-explorer
+$ git clone https://github.com/<your_username>/infra
 ```
 
 #### 2. Update `infra`
 
-   2.1. Locate an existing Beman library inside `bin/yaml/libraries.yaml` - e.g. search for `repo: bemanproject/optional`.
+   2.1. Locate an existing Beman library inside `<compiler-explorer-infra-dir>/bin/yaml/libraries.yaml` - e.g. search for `repo: bemanproject/optional`.
 
    2.2. Add a new entry (keeping Beman entries grouped and sorted):
 
@@ -43,13 +48,15 @@ Notes:
 * `target: ... main`: Only deploy main as trunk version.
 * `type: github`: The repo will be always clone with latest version.
 
+
   2.3. Deploy local `infra/` instance. For header-only libraries, it's enough to just run:
 
 ```bash
 # Create default deployment directory and make sure to set write permissions for your user.
 $ mkdir -p /opt/compiler-explorer
-$ ls -l /opt/                  
-drwxr-xr-x  25 dariusn  wheel   800 Apr  7 21:29 compiler-explorer
+$ sudo chown -R $USER:$USER /opt/compiler-explorer  # fix ownership for Compiler Explorer directory
+$ ls -ld /opt/compiler-explorer
+drwxr-xr-x  25 <owner>  <group>   800 Apr  7 21:29 /opt/compiler-explorer
 
 $ cd infra/
 $ make ce
@@ -100,21 +107,22 @@ $ tree --charset=ascii /opt/compiler-explorer/libs/beman_optional
 
 Note: Currently, we copy the entire tree (including build files, docs, tests etc). In [#111: Skip unnecessary files in Compiler Explorer deployments](https://github.com/bemanproject/beman/issues/111) will ensure that only required files are copied.
 
-  2.5. Commit `bin/yaml/libraries.yaml` and push the changes upstream! (PR instructions at step 4)
+  2.5. Commit `<compiler-explorer-infra-dir>/bin/yaml/libraries.yaml` and push the changes upstream! (PR instructions at step 4)
 
 #### 3. Update `compiler-explorer`
 
-  3.1. Locate or create `etc/config/c++.local.properties`. Add your entry according to Compiler Explorer docs (examples also in `etc/config/c++.amazon.properties`). For example, for adding `beman.optional` from step 2, do this:
+  3.1. Locate or create `<compiler-explorer-dir>/etc/config/c++.local.properties`. Add your entry according to Compiler Explorer docs (examples also in `<compiler-explorer-dir>/etc/config/c++.amazon.properties`). For example, for adding `beman.optional` from step 2, do this:
 
 ```yml
 # Installed libs (see c++.amazon.properties for production examples)
-libs=beman_optional                                                                            # The list of libraries separated by colons, e.g. beman_optional
 
+...
 libs.beman_optional.name=beman.optional                                                         # The name of the library.
 libs.beman_optional.versions=trunk                                                              # The version of the library, always trunk for now.  
 libs.beman_optional.url=https://github.com/bemanproject/optional                                # The URL of the library.
 libs.beman_optional.versions.trunk.version=trunk                                                # The version of the library, always trunk for now.
 libs.beman_optional.versions.trunk.path=/opt/compiler-explorer/libs/beman_optional/main/include # The path to the library.
+...
 ```
 
   3.2. Start local deployment:
@@ -149,36 +157,34 @@ int main() { return beman::optional::optional<int>{26}.value(); }
 
 ![](./images/godbolt-example-step04-ok.png)
 
-  3.7. Mirror changes from `etc/config/c++.local.properties` to `etc/config/c++.amazon.properties` (need to find the place to insert the new Beman library alongside the existing ones).
+  3.7. Mirror changes from `<compiler-explorer-dir>/etc/config/c++.local.properties` to `<compiler-explorer-dir>/etc/config/c++.amazon.properties`. Add a new entry (keeping Beman entries grouped and sorted):
 
 ```bash
 $ cat etc/config/c++.amazon.properties | grep -A3 -B3 beman_optional
-/c++.amazon.properties
-#################################
-#################################
 # Installed libs
-libs=abseil:array:async_simple:belleviews:beman_iterator_interface:beman_optional:benchmark:...
 ...
-libs.beman_iterator_interface.versions.trunk.lookupversion=main
+libs.beman_net.versions.trunk.version=trunk
+libs.beman_net.versions.trunk.path=/opt/compiler-explorer/libs/beman_net/main/include
 
 libs.beman_optional.name=beman.optional
 libs.beman_optional.versions=trunk
-libs.beman_optional.url=https://github.com/beman-project/optional
+libs.beman_optional.url=https://github.com/bemanproject/optional
 libs.beman_optional.versions.trunk.version=trunk
 libs.beman_optional.versions.trunk.path=/opt/compiler-explorer/libs/beman_optional/main/include
 
-libs.benchmark.name=Google Benchmark
-...
+libs.beman_scope.name=beman.scope
+libs.beman_scope.versions=trunk
+
 ```
 
-  3.8. Commit `etc/config/c++.amazon.properties`. Commit and push the changes upstream! (PR instructions at step 4)
+  3.8. Commit `<compiler-explorer-dir>/etc/config/c++.amazon.properties`. Commit and push the changes upstream! (PR instructions at step 4)
 
 #### 4. Open PRs
    4.1. Open issues in Compiler Explorer repo. Example: <https://github.com/compiler-explorer/compiler-explorer/issues/6651>.
 
-   4.2.: Open PR with change from `bin/yaml/libraries.yaml` in <https://github.com/compiler-explorer/infra>. Commit example: <https://github.com/compiler-explorer/infra/commit/96d504ac2d39212d22fc3dc5f8c7be3909457d29>.
+   4.2.: Open PR with change from `<compiler-explorer-infra-dir>/bin/yaml/libraries.yaml` in <https://github.com/compiler-explorer/infra>. Commit example: <https://github.com/compiler-explorer/infra/commit/96d504ac2d39212d22fc3dc5f8c7be3909457d29>.
 
-   4.3.: Open PR with change from `etc/config/c++.amazon.properties` in <https://github.com/compiler-explorer/compiler-explorer>. Commit example: <https://github.com/compiler-explorer/compiler-explorer/commit/738fd3b0c5979677e56d3550526efe2eaaa6f2fe>.
+   4.3.: Open PR with change from `<compiler-explorer-dir>/etc/config/c++.amazon.properties` in <https://github.com/compiler-explorer/compiler-explorer>. Commit example: <https://github.com/compiler-explorer/compiler-explorer/commit/738fd3b0c5979677e56d3550526efe2eaaa6f2fe>.
 
    4.4. Link both PRs to your CE issue and to your Beman issue.
 
@@ -186,18 +192,17 @@ libs.benchmark.name=Google Benchmark
 
 ### Header-only library, but a processing step is required - example: `beman.iterator_interface`
 
-Instructions are similar to previous section, but a build command neededs to be run to properly generate final deployable header.
+Instructions are similar to the previous section, but a build command needed to be run to properly generate final deployable header.
 
 For example, to deploy / install `beman.iterator_interface` on Compiler Explorer, we follow the previous steps:
 
-#### 1. Clone Compiler Explorer repos
+#### 1. Fork and clone Compiler Explorer repos
 
 Same as in [Integrating a header-only library](#integrating-a-header-only-library).
 
 #### 2. Updates in `infra`
 
-
-Update `infra/bin/yaml/libraries.yaml`:
+Update `<compiler-explorer-infra-dir>/bin/yaml/libraries.yaml`:
 
 ```yaml
 ...
@@ -231,12 +236,9 @@ Notes:
 
 #### 3. Update `compiler-explorer`
 
-
-Update: `compiler-explorer/etc/config/c++.amazon.properties`:
+Update: `<compiler-explorer-dir>/etc/config/c++.amazon.properties`:
 
 ```yaml
-...
-libs=...:beman_iterator_interface:beman_optional:...
 ...
 libs.beman_iterator_interface.name=beman.iterator_interface
 libs.beman_iterator_interface.versions=trunk
