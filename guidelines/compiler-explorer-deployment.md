@@ -192,7 +192,7 @@ libs.beman_scope.versions=trunk
 
 ### Header-only library, but a processing step is required - example: `beman.iterator_interface`
 
-Instructions are similar to the previous section, but a build command needed to be run to properly generate final deployable header.
+Instructions are similar to the previous section, but a build command needs to be run to properly generate final deployable header.
 
 For example, to deploy / install `beman.iterator_interface` on Compiler Explorer, we follow the previous steps:
 
