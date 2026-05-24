@@ -261,44 +261,53 @@ Examples:
 
 ### **[readme.badges]**
 
-**Requirement**: Following the title, the `README.md` must have a one-line badge list. Examples: library status (`[readme.library_status]`), CI status, code coverage, Compiler Explorer example.
+**Requirement**: Following the title, the `README.md` must have a badge list. Examples: library status (`[readme.library_status]`), CI status, code coverage, Compiler Explorer example.
 
 Example:
 ```markdown
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg) ![Continuous Integration Tests](https://github.com/bemanproject/exemplar/actions/workflows/ci_tests.yml/badge.svg) ![Lint Check (pre-commit)](https://github.com/bemanproject/exemplar/actions/workflows/pre-commit.yml/badge.svg) [![Compiler Explorer Example](https://img.shields.io/badge/Try%20it%20on%20Compiler%20Explorer-grey?logo=compilerexplorer&logoColor=67c52a)](https://godbolt.org)
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
+[![Continuous Integration Tests](https://github.com/bemanproject/exemplar/actions/workflows/ci_tests.yml/badge.svg)](https://github.com/bemanproject/exemplar/actions/workflows/ci_tests.yml)
+[![Lint Check (pre-commit)](https://github.com/bemanproject/exemplar/actions/workflows/pre-commit-check.yml/badge.svg)](https://github.com/bemanproject/exemplar/actions/workflows/pre-commit-check.yml)
+[![Coverage](https://coveralls.io/repos/github/bemanproject/exemplar/badge.svg?branch=main)](https://coveralls.io/github/bemanproject/exemplar?branch=main)
+![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
+[![Compiler Explorer Example](https://img.shields.io/badge/Try%20it%20on%20Compiler%20Explorer-grey?logo=compilerexplorer&logoColor=67c52a)](https://godbolt.org/z/4qEPK87va)
 ```
 
-Use exactly one of the following entries for the library status badge:
+Use exactly one of the following entries for the library status badge.
+
+For "Under development" (which should be used by new libraries), use:
 
 ```markdown
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_under_development.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
 ```
 
-or
+For "Production ready. API may undergo changes," use:
 
 ```markdown
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_api_may_undergo_changes.svg)
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_api_may_undergo_changes.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
 ```
 
-or
+For "Production ready. Stable API," use:
 
 ```markdown
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_stable_api.svg)
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_production_ready_stable_api.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
 ```
 
-or
+For "Retired. No longer maintained or actively developed," use:
 
 ```markdown
-![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_retired.svg)
+[![Library Status](https://raw.githubusercontent.com/bemanproject/beman/refs/heads/main/images/badges/beman_badge-beman_library_retired.svg)](https://github.com/bemanproject/beman/blob/main/docs/beman_library_maturity_model.md#the-beman-library-maturity-model)
 ```
 
-Use exactly one of the following entries for the standard target status badge:
+Use exactly one of the following entries for the standard target status badge. 
+
+For C++26, use:
 
 ```markdown
 ![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp26.svg)
 ```
 
-or
+For C++29, use:
 
 ```markdown
 ![Standard Target](https://github.com/bemanproject/beman/blob/main/images/badges/cpp29.svg)
