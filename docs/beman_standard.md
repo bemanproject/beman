@@ -789,8 +789,7 @@ Examples: `identity.test.cpp`, `optional_ref.test.cpp` or `optional_range_suppor
 
 ### **[file.license_id]**
 
-**Requirement**: The [SPDX license identifier](https://spdx.dev/learn/handling-license-info/) must be added at the
-first possible line in all files which can contain a comment
+**Requirement**: The [SPDX license identifier](https://spdx.dev/learn/handling-license-info/) must be added within the first 25 lines in all files which can contain a comment
 (e.g., C++, scripts, CMake/Makefile, YAML/YML, JASON, XML, HTML, LaTeX, Dockerfile etc).
 
 Examples:
